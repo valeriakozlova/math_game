@@ -16,6 +16,7 @@ class Game
 
     while(!game_over?)
 
+        # you can break this down into several functions, each responsible for an action
         @turn.new_turn
         current_player = @turn.current_player
         opponent = @turn.opponent
@@ -43,6 +44,7 @@ class Game
   def end_game
     puts ""
     puts "====== Game Over! ======="
+    puts ""
     winner = @players.select{|player| !player.dead?}.first
     puts "#{winner.name} wins with a score #{winner.status}"
   end

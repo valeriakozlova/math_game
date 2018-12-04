@@ -4,11 +4,12 @@ class Turn
   
     def initialize(players)
       @players = players.shuffle
+    #   having null is bad practice, have a method that starts the game
       @current_player = nil
       @opponent = nil
       @round = 1
     end
-  
+    
     def get_current_player
       @players.first
     end
